@@ -1,0 +1,240 @@
+
+#jumbotron {
+  padding-top: 2rem;
+  background-color: #cfcad1;
+}
+
+#favorite {
+  background-color: #cfcad1;
+  background-size: auto;
+}
+
+.video-list {
+  text-align: center;
+}
+
+.waveb {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #FEFEFE;
+}
+
+/* burger icon */
+
+.burger {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: white;
+}
+
+.change .bar2 {opacity: 0;   background-color: white;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+    background-color: white;
+}
+
+/* wraper */
+
+.wrapper {
+
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  padding: 10px 20px;
+  box-shadow: 1px 2px 10px 2px rgba(0,0,0,.1);
+  background-color: #30385c;
+  position: relative;
+  z-index: 10;
+}
+ 
+
+nav .brand a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 550;
+  color: #f45002;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-variant: small small-caps;
+
+}
+
+.bg-sidebar {
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background: rgba(0,0,0,.1);
+  transition: .3s;
+  visibility: hidden;
+  color: #f45002;
+  z-index: 10;
+}
+
+.bg-sidebar.change {
+  right: 0;
+  visibility: visible;
+  display: block;
+  color: #f45002;
+}
+
+nav ul {
+    display: flex;
+    position: fixed;    
+    background-color:#505050;
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    width: 300px;
+    transition: .5s;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 20;
+}
+
+nav ul.change {
+    right: 0;
+    transition: .5s;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 20px 15px;
+}
+
+nav ul li a {
+  color: #f45002;
+  font-size: 1.2rem;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+
+@media screen and (min-width: 960px) {
+
+  .bg-sidebar.change {
+   right: 0;
+   visibility: hidden;
+   display: none;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    display: flex;
+      position: relative;    
+      background-color:unset;
+      top: unset;
+      bottom: unset;
+      right: unset;
+      width: unset;
+      flex-direction: row;
+  }
+
+  nav ul li {
+    padding: 10px 15px;
+
+  }
+
+  nav ul li:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    transition: .3s;
+    background-color: #f45002;
+    color: #f45002;
+    transform: translateY(20px);
+  }
+
+
+  nav ul li a {
+    color: #f45002;
+    font-size: 1.1rem;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .container-flex {
+   width: 100%;
+   max-width: 1024px;
+   margin: auto;
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+
+
+div .waveb {
+  padding: 0;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+
+/** CSS BACKUP NAVBAR
+
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #30385c">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="color: #f45002; font-style: italic; font-weight: bold">WJNXX's Web</a>
+        <button class="navbar-toggler" type="button" style="color: #f45002" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#jumbotron" style="color: #f45002; font-weight: bold">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" style="color: #f45002; font-weight: bold">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#favorite" style="color: #f45002; font-weight: bold">Kpop Things</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" style="color: #f45002; font-weight: bold">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
